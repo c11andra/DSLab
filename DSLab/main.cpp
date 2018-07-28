@@ -22,13 +22,21 @@ void TestQueue()
 void TestCAQueue()
 {
     CAQueue<int> q(2);
-    q.Enqueue(4);
+    q.Enqueue(1);
+    q.Enqueue(2);
     q.Enqueue(3);
+    q.Enqueue(4);
+
+    q.Dequeue();
+    q.Dequeue();
+
+    q.Enqueue(5);
+    q.Enqueue(6);
     
     while(!q.IsEmptyQueue())
     {
         int i =  q.Dequeue();
-        cout << i<<endl;
+        cout << i << endl;
     }
 }
 void TestStack()
