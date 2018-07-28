@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "Queue.h"
 #include "Stack.h"
+#include "CAQueue.h"
 
 using namespace std;
 using namespace DSLab;
@@ -16,7 +17,19 @@ void TestQueue()
         int i =  q.Dequeue();
         cout << i<<endl;
     }
+}
 
+void TestCAQueue()
+{
+    CAQueue<int> q(2);
+    q.Enqueue(4);
+    q.Enqueue(3);
+    
+    while(!q.IsEmptyQueue())
+    {
+        int i =  q.Dequeue();
+        cout << i<<endl;
+    }
 }
 void TestStack()
 {
@@ -34,6 +47,7 @@ void TestStack()
 int main(int argc, char **argv)
 {
    //TestQueue();
-   TestStack();
+   //TestStack();
+   TestCAQueue();
 	return 0;
 }

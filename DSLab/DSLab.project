@@ -97,6 +97,7 @@
     <File Name="Node.h"/>
     <File Name="Queue.h"/>
     <File Name="Stack.h"/>
+    <File Name="CAQueue.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>

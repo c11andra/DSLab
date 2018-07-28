@@ -40,8 +40,7 @@ namespace DSLab
         
         bool IsEmptyQueue()
         {
-            if(front == NULL) return true;
-            return false;
+            return front == NULL;
         }
 
     };
