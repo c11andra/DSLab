@@ -4,6 +4,7 @@
 #include "Stack.h"
 #include "CAQueue.h"
 #include "LinkedList.h"
+#include "BinaryTree.h"
 
 using namespace std;
 using namespace DSLab;
@@ -63,10 +64,7 @@ void LinkedListTest()
     l.Insert(3, 1);
     l.Insert(2, 1);
     l.Insert(4, 3);
-    l.Insert(5, 5);
-
     l.Insert(9, 10);
-
     
     l.PrintAll();
     cout << "Delettion and Print" << endl;
