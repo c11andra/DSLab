@@ -55,9 +55,37 @@ namespace DSLab
                 std::cout << "Valid position not found" <<std::endl;
             }
 
+            void Delete(int position)
+            {
+                
+                if(position == 0)
+                {
+                    Node<T>* temp = head;
+                    head = head->Next;
+                    delete temp;
+                    return;
+                }
+
+                Node<T>* prev = NULL;
+                Node<T>* temp = head;
+                int currPos = 0;
+                while(temp != NULL)
+                {
+                    if(currPos == position)
+                    {
+                        prev->Next = temp->Next;
+                        delete temp;
+                        return ;
+                    }
+                    prev = temp;
+                    temp = temp->Next;
+                    ++ currPos;
+                }
+                std::cout <<"Valid Postion to delete not found" << std::endl;
+            }
+
             void PrintAll()
             {
-    
                 Node<T>* temp = head;
                 while(temp != NULL){
                     std::cout << temp->Data<< std::endl;
