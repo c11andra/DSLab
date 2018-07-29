@@ -3,6 +3,7 @@
 #include "Queue.h"
 #include "Stack.h"
 #include "CAQueue.h"
+#include "LinkedList.h"
 
 using namespace std;
 using namespace DSLab;
@@ -26,12 +27,14 @@ void TestCAQueue()
     q.Enqueue(2);
     q.Enqueue(3);
     q.Enqueue(4);
-
-    q.Dequeue();
-    q.Dequeue();
-
     q.Enqueue(5);
     q.Enqueue(6);
+
+    q.Dequeue();
+    q.Dequeue();
+
+    q.Enqueue(7);
+    q.Enqueue(8);
     
     while(!q.IsEmptyQueue())
     {
@@ -52,10 +55,22 @@ void TestStack()
     }
     
 }
+
+void LinkedListTest()
+{
+    LinkedList<int> l;
+    l.Insert(1, 0);
+    l.Insert(3, 1);
+    l.Insert(2, 1);
+    l.Insert(5, 5);
+
+    l.PrintAll();
+}
 int main(int argc, char **argv)
 {
    //TestQueue();
    //TestStack();
-   TestCAQueue();
+   //TestCAQueue();
+   LinkedListTest();
 	return 0;
 }
