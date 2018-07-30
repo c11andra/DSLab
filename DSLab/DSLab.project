@@ -98,6 +98,9 @@
     <File Name="Queue.h"/>
     <File Name="Stack.h"/>
     <File Name="CAQueue.h"/>
+    <File Name="BinaryTree.h"/>
+    <File Name="BinaryTreeNode.h"/>
+    <File Name="LinkedList.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
