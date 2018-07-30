@@ -6,8 +6,8 @@ namespace DSLab
     template <class T>
     struct BinaryTreeNode{
         T Data;
-        BinaryTreeNode<T>* left;
-        BinaryTreeNode<T>* right;
+        BinaryTreeNode<T>* Left = NULL;
+        BinaryTreeNode<T>* Right = NULL;
     };
 }
 

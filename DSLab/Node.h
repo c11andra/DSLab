@@ -6,7 +6,7 @@ namespace DSLab
     template <class T>
     struct Node{
         T Data;
-        Node* Next;
+        Node* Next = NULL;
     };
 }
 
