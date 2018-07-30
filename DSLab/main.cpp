@@ -14,7 +14,7 @@ void TestQueue()
     q.Enqueue(4);
     q.Enqueue(3);
     
-    while(!q.IsEmptyQueue())
+    while(!q.IsEmpty())
     {
         int i =  q.Dequeue();
         cout << i<<endl;
@@ -57,7 +57,7 @@ void TestStack()
     
 }
 
-void LinkedListTest()
+void TestLinkedList()
 {
     LinkedList<int> l;
     l.Insert(1, 0);
@@ -74,11 +74,26 @@ void LinkedListTest()
 
     l.PrintAll();
 }
+
+void TestBinaryTree()
+{
+    BinaryTree<int> tree;
+    tree.Insert(1);
+    tree.Insert(2);
+    tree.Insert(3);
+    tree.Insert(4);
+  
+
+    tree.TraverseLevelOrder();
+}
+
 int main(int argc, char **argv)
 {
    //TestQueue();
    //TestStack();
    //TestCAQueue();
-   LinkedListTest();
+  // TestLinkedList();
+   TestBinaryTree();
+   
 	return 0;
 }

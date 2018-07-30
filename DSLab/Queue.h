@@ -23,13 +23,12 @@ namespace DSLab
                 rear->Next->Data = data;
                 rear = rear->Next;
             }
-            
         }
         
         T Dequeue()
         {
             T data;
-            if(IsEmptyQueue())return data;
+            if(IsEmpty())return data;
             Node<T>* temp = front;
             
             front = front->Next;
@@ -38,7 +37,7 @@ namespace DSLab
             return data;
         }
         
-        bool IsEmptyQueue()
+        bool IsEmpty()
         {
             return front == NULL;
         }
