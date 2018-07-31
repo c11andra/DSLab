@@ -49,7 +49,7 @@ void TestStack()
     s.Push(9);
     s.Push(10);
     
-    while(!s.IsEmptyStack())
+    while(!s.IsEmpty())
     {
         int i =  s.Pop();
         cout << i<<endl;
@@ -82,9 +82,17 @@ void TestBinaryTree()
     tree.Insert(2);
     tree.Insert(3);
     tree.Insert(4);
+    tree.Insert(5);
+    tree.Insert(6);
+    tree.Insert(7);
   
 
+    cout << "\n---LevelOrder---"<< endl;
     tree.TraverseLevelOrder();
+
+    cout << "---InOrder---"<< endl;
+    
+    tree.TraverseInOrder();
 }
 
 int main(int argc, char **argv)

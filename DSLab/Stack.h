@@ -24,7 +24,7 @@ namespace DSLab
             T Pop()
             {
                 T data;
-                if(IsEmptyStack()) return data;
+                if(IsEmpty()) return data;
                 data = head->Data;
                 Node<T>* temp = head;
                 head = head->Next;
@@ -32,7 +32,7 @@ namespace DSLab
                 return data;
             }
             
-            bool IsEmptyStack()
+            bool IsEmpty()
             {
                 return head == NULL;
             }
