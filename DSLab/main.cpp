@@ -5,6 +5,7 @@
 #include "CAQueue.h"
 #include "LinkedList.h"
 #include "BinaryTree.h"
+#include "BinarySearchTree.h"
 
 using namespace std;
 using namespace DSLab;
@@ -95,13 +96,31 @@ void TestBinaryTree()
     tree.TraverseInOrder();
 }
 
+
+void TestBinarySearchTree()
+{
+    BinarySearchTree<int> tree;
+    tree.Insert(1);
+    tree.Insert(2);
+    tree.Insert(3);
+    tree.Insert(4);
+    tree.Insert(5);
+    tree.Insert(6);
+    tree.Insert(7);
+  
+
+    cout << "\n---InOrder---"<< endl;
+    tree.TraverseInOrder();
+}
+
 int main(int argc, char **argv)
 {
    //TestQueue();
    //TestStack();
    //TestCAQueue();
   // TestLinkedList();
-   TestBinaryTree();
+   //TestBinaryTree();
+   TestBinarySearchTree();
    
 	return 0;
 }

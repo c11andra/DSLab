@@ -101,6 +101,7 @@
     <File Name="BinaryTree.h"/>
     <File Name="BinaryTreeNode.h"/>
     <File Name="LinkedList.h"/>
+    <File Name="BinarySearchTree.h"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
