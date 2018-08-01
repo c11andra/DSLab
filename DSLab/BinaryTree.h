@@ -94,6 +94,30 @@ namespace DSLab
                     
                 }
             }
+            
+             void TraversePreOrder()
+            {
+                Stack<BinaryTreeNode<T>*> s;
+                BinaryTreeNode<T>* temp = root;
+                while(1)
+                {
+                    while(temp != NULL)
+                    {
+                        std::cout << temp->Data<<std::endl;
+                        s.Push(temp); 
+                        temp = temp->Left;
+                    }
+
+                    if(!s.IsEmpty())
+                    {
+                        temp = s.Pop();
+                        temp = temp->Right;
+                    }
+                    else
+                        break;
+                    
+                }
+            }
     };
 }
 

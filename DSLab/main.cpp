@@ -68,7 +68,7 @@ void TestLinkedList()
     l.Insert(9, 10);
     
     l.PrintAll();
-    cout << "Delettion and Print" << endl;
+    cout << "Delete and Print" << endl;
     l.Delete(0);
     l.Delete(2);
     l.Delete(3);
@@ -92,8 +92,10 @@ void TestBinaryTree()
     tree.TraverseLevelOrder();
 
     cout << "---InOrder---"<< endl;
-    
     tree.TraverseInOrder();
+    
+    cout << "---PreOrder---"<< endl;
+    tree.TraversePreOrder();
 }
 
 
@@ -119,8 +121,8 @@ int main(int argc, char **argv)
    //TestStack();
    //TestCAQueue();
   // TestLinkedList();
-   //TestBinaryTree();
-   TestBinarySearchTree();
+   TestBinaryTree();
+   //TestBinarySearchTree();
    
 	return 0;
 }
