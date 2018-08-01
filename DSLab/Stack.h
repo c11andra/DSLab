@@ -31,6 +31,11 @@ namespace DSLab
                 delete(temp);
                 return data;
             }
+
+            T Top()
+            {
+                return head->Data;
+            }
             
             bool IsEmpty()
             {
