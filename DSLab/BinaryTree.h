@@ -95,7 +95,7 @@ namespace DSLab
                 }
             }
             
-             void TraversePreOrder()
+            void TraversePreOrder()
             {
                 Stack<BinaryTreeNode<T>*> s;
                 BinaryTreeNode<T>* temp = root;
@@ -115,6 +115,52 @@ namespace DSLab
                     }
                     else
                         break;
+                    
+                }
+            }
+
+            void TraversePostOrder()
+            {
+                if(!root)
+                {
+                     std::cout<< "Tree is empty";
+                     return;
+                }
+                Stack<BinaryTreeNode<T>*> s;
+                BinaryTreeNode<T>* temp = root;
+
+                int rootEncountered = 0;
+                while(1)
+                {
+                    while(temp)
+                    {
+                        s.Push(temp); 
+                        temp = temp->Left;
+                    }
+
+                    if(s.Top()->Right == NULL)
+                    {
+                        temp = s.Pop();
+                        std::cout << temp->Data << std::endl;
+                        if(s.Top()->Right == temp)
+                        {
+                            std::cout << s.Pop()->Data << std::endl;
+                        }
+                    }
+
+                    if(!s.IsEmpty())
+                    {
+                        if(s.Top() == root)
+                        {
+                            if(++rootEncountered == 2)
+                            {
+                                std::cout << s.Pop()->Data << std::endl;
+                                break;
+                            }
+                        }
+                        
+                        temp = s.Top()->Right;
+                    } 
                     
                 }
             }

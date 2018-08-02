@@ -86,7 +86,9 @@ void TestBinaryTree()
     tree.Insert(5);
     tree.Insert(6);
     tree.Insert(7);
-  
+    tree.Insert(8);
+    tree.Insert(9);
+    tree.Insert(10);
 
     cout << "\n---LevelOrder---"<< endl;
     tree.TraverseLevelOrder();
@@ -96,6 +98,9 @@ void TestBinaryTree()
     
     cout << "---PreOrder---"<< endl;
     tree.TraversePreOrder();
+
+    cout << "---PostOrder---"<< endl;
+    tree.TraversePostOrder();
 }
 
 
@@ -110,7 +115,6 @@ void TestBinarySearchTree()
     tree.Insert(6);
     tree.Insert(7);
   
-
     cout << "\n---InOrder---"<< endl;
     tree.TraverseInOrder();
 }
