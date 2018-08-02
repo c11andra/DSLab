@@ -15,7 +15,7 @@ namespace DSLab
             int rear = -1;
             int front = -1;
             
-            bool IsQueueFull()
+            bool IsFull()
             {
                 int currentSize = CurrentSize();
                 return capacity == currentSize ;
@@ -31,7 +31,7 @@ namespace DSLab
             
             void IncreaseSize()
             {
-                if(!IsQueueFull()) return;
+                if(!IsFull()) return;
                 int oldCapacity = capacity;
                 capacity *= 2;
                 T* oldArr = arr;
@@ -97,7 +97,7 @@ namespace DSLab
             arr = new T[capacity];
         }
         
-        bool IsQueueEmpty()
+        bool IsEmpty()
         {
             return CurrentSize() == 0;
         }
@@ -116,7 +116,7 @@ namespace DSLab
         T Dequeue()
         {
             T data;
-            if(IsQueueEmpty()){return data;}
+            if(IsEmpty()){return data;}
             data = arr[front];
             if(front == rear) 
             {

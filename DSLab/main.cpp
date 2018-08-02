@@ -38,7 +38,7 @@ void TestCAQueue()
     q.Enqueue(7);
     q.Enqueue(8);
     
-    while(!q.IsEmptyQueue())
+    while(!q.IsEmpty())
     {
         int i =  q.Dequeue();
         cout << i << endl;
