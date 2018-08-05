@@ -56,6 +56,29 @@ namespace DSLab
                 }
             }
             
+            int FindMax()
+            {
+                if(root == NULL) return -1;
+                BinaryTreeNode<T>* temp = root;
+                while(temp->Right)
+                {
+                    temp = temp->Right;
+                }
+                return temp->Data;
+            }
+
+            int FindMin()
+            { 
+                if(root == NULL) return -1;
+                BinaryTreeNode<T>* temp = root;
+                while(temp->Left)
+                {
+                    temp = temp->Left;
+                }
+                return temp->Data;
+            }
+
+            
     };
     
 }

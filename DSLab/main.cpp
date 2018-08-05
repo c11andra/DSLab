@@ -117,6 +117,9 @@ void TestBinarySearchTree()
   
     cout << "\n---InOrder---"<< endl;
     tree.TraverseInOrder();
+    cout << "\n Max: " << tree.FindMax()<<endl;
+
+    cout << "\n Min: " << tree.FindMin()<<endl;
 }
 
 int main(int argc, char **argv)
@@ -125,8 +128,8 @@ int main(int argc, char **argv)
    //TestStack();
    //TestCAQueue();
   // TestLinkedList();
-   TestBinaryTree();
-   //TestBinarySearchTree();
+   //TestBinaryTree();
+   TestBinarySearchTree();
    
 	return 0;
 }
