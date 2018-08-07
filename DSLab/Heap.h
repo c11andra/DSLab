@@ -20,14 +20,14 @@ namespace DSLab
             int LeftChild(int i)
             {
                 if(i < 0 || i > count) return -1;
-                int pos = 2*i+1;
+                int pos = 2*i + 1;
                 return pos > count -1 ? -1 : pos;
             }
 
             int RightChild(int i)
             {
                 if(i < 0 || i > count) return -1;
-                int pos = 2*i+2;
+                int pos = 2*i + 2;
                 return pos > count - 1 ? -1 : pos;
             }
 
@@ -47,6 +47,42 @@ namespace DSLab
                 }
             }
 
+            void ResizeHeap()
+            {
+                int *oldArray = this->arr;
+                int oldCapacity = this->capacity;
+                this->capacity = 2 * this->capacity;
+                this->arr = new T[capacity];
+                
+                for(int i = 0; i < this->count ; i++)
+                {
+                    arr[i] = oldArray[i];
+                }
+                delete[] oldArray;
+                
+            }
+
+            void Insert(T data)
+            {
+                if(this->count == this->capacity)
+                {
+                    ResizeHeap();
+                }
+                
+                int i = this->count;
+                this->count ++;
+                arr[i] = data;
+                int parent = Parent(i);
+                while(i > -1 && parent > -1 && data > arr[parent])
+                {
+                    arr[i] = arr[parent];
+                    arr[parent] = data;
+                    i = parent;
+                    parent = Parent(i);
+                }
+
+            }
+            
             void PercolateDown(int i)
             {
                 int l = LeftChild(i);
@@ -74,7 +110,6 @@ namespace DSLab
                 PercolateDown(0);
                 return max;
             }
-
     };
 }
 #endif

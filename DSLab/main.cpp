@@ -19,7 +19,7 @@ void TestQueue()
     while(!q.IsEmpty())
     {
         int i =  q.Dequeue();
-        cout << i<<endl;
+        cout << i <<endl;
     }
 }
 
@@ -129,6 +129,19 @@ void TestHeap()
     int arr[] = {1,2,3,4,5};
     h.BuildHeap(arr, 5, 10);
 
+    for(int i = 0; i < 5; i++)
+    {
+        cout << h.DeleteMax() << endl;
+    }
+
+    cout << "\n Insert" << endl;
+    h.Insert(2);
+    h.Insert(4);
+    h.Insert(3);
+    h.Insert(5);
+    h.Insert(10);
+    h.Insert(1);
+    h.Insert(11);
     for(int i = 0; i < 5; i++)
     {
         cout << h.DeleteMax() << endl;
