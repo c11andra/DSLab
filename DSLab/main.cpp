@@ -6,6 +6,7 @@
 #include "LinkedList.h"
 #include "BinaryTree.h"
 #include "BinarySearchTree.h"
+#include "Heap.h"
 
 using namespace std;
 using namespace DSLab;
@@ -122,6 +123,18 @@ void TestBinarySearchTree()
     cout << "\n Min: " << tree.FindMin()<<endl;
 }
 
+void TestHeap()
+{
+    Heap<int> h;
+    int arr[] = {1,2,3,4,5};
+    h.BuildHeap(arr, 5, 10);
+
+    for(int i = 0; i < 5; i++)
+    {
+        cout << h.DeleteMax() << endl;
+    }
+}
+
 int main(int argc, char **argv)
 {
    //TestQueue();
@@ -129,7 +142,8 @@ int main(int argc, char **argv)
    //TestCAQueue();
   // TestLinkedList();
    //TestBinaryTree();
-   TestBinarySearchTree();
+   //TestBinarySearchTree();
+   TestHeap();
    
 	return 0;
 }
